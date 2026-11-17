@@ -1,0 +1,6 @@
+{
+  "name": "Give-AID — NGO Fundraising & Welfare Platform",
+  "description": "A centralized NGO fundraising and welfare platform connecting NGOs, donors, volunteers, and beneficiaries with editorial Hope Rise-inspired visual design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

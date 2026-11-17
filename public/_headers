@@ -1,0 +1,35 @@
+# Give-AID Static Asset & Document Caching Rules
+
+# Content-hashed production JS & CSS bundles (1 year immutable)
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# Official NGO logos, branding marks & favicons
+/assets/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/assets/favicon/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/assets/aistudio/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/favicon.ico
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Personalized / transactional HTML views — never store in shared caches
+/profile.html
+  Cache-Control: private, no-store
+
+/donation-history.html
+  Cache-Control: private, no-store
+
+/confirmation.html
+  Cache-Control: private, no-store
+
+# Public HTML documents — always revalidate with ETag/Last-Modified
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
